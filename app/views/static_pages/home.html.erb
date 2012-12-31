@@ -1,8 +1,12 @@
 <div class="center hero-unit">
+    
     <h1>Welcome to NoteMate</h1>
-
-    <h2>
-        So let it be written, so let it be done.
-    </h2>
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+    <% if !signed_in? %>
+        <h2>
+            So let it be written, so let it be done.
+        </h2>
+        <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+    <% else %>
+        <%= link_to "Get Started!", "#", class: "btn btn-large btn-primary" %>
+    <% end %>
 </div>
