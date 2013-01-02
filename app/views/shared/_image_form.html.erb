@@ -1,0 +1,9 @@
+<%= form_for @image, :html => { :multipart => true, :capture => "camera" } do |f| %>
+    <% if false %>
+        <%= render 'shared/error_messages', object: f.object %>
+    <% end %>
+    <div class="field">
+        <%= f.file_field :attachment %>
+    </div>
+    <%= f.submit "Upload", class: "btn btn-large btn-primary" %>
+<% end %>
